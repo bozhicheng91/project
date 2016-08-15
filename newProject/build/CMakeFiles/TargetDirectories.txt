@@ -1,5 +1,0 @@
-/home/bozhicheng/Documents/program/gitnewprogram/newProject/build/CMakeFiles/edit_cache.dir
-/home/bozhicheng/Documents/program/gitnewprogram/newProject/build/CMakeFiles/rebuild_cache.dir
-/home/bozhicheng/Documents/program/gitnewprogram/newProject/build/src/CMakeFiles/edit_cache.dir
-/home/bozhicheng/Documents/program/gitnewprogram/newProject/build/src/CMakeFiles/rebuild_cache.dir
-/home/bozhicheng/Documents/program/gitnewprogram/newProject/build/src/CMakeFiles/test_coco.dir
