@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bozhicheng/Documents/program/C++/newProject
+CMAKE_SOURCE_DIR = /home/bozhicheng/Documents/program/gitnewprogram/newProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bozhicheng/Documents/program/C++/newProject/build
+CMAKE_BINARY_DIR = /home/bozhicheng/Documents/program/gitnewprogram/newProject/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bozhicheng/Documents/program/C++/newProject/build/CMakeFiles /home/bozhicheng/Documents/program/C++/newProject/build/src/CMakeFiles/progress.marks
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bozhicheng/Documents/program/C++/newProject/build/CMakeFiles 0
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bozhicheng/Documents/program/gitnewprogram/newProject/build/CMakeFiles /home/bozhicheng/Documents/program/gitnewprogram/newProject/build/src/CMakeFiles/progress.marks
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bozhicheng/Documents/program/gitnewprogram/newProject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/test_coco.dir/rule:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/test_coco.dir/rule
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/test_coco.dir/rule
 .PHONY : src/CMakeFiles/test_coco.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ test_coco: src/CMakeFiles/test_coco.dir/rule
 
 # fast build rule for target.
 test_coco/fast:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/build
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/build
 .PHONY : test_coco/fast
 
 DataInput.o: DataInput.cpp.o
@@ -131,7 +131,7 @@ DataInput.o: DataInput.cpp.o
 
 # target to build an object file
 DataInput.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.o
 .PHONY : DataInput.cpp.o
 
 DataInput.i: DataInput.cpp.i
@@ -140,7 +140,7 @@ DataInput.i: DataInput.cpp.i
 
 # target to preprocess a source file
 DataInput.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.i
 .PHONY : DataInput.cpp.i
 
 DataInput.s: DataInput.cpp.s
@@ -149,7 +149,7 @@ DataInput.s: DataInput.cpp.s
 
 # target to generate assembly for a file
 DataInput.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/DataInput.cpp.s
 .PHONY : DataInput.cpp.s
 
 IncLocal.o: IncLocal.cpp.o
@@ -158,7 +158,7 @@ IncLocal.o: IncLocal.cpp.o
 
 # target to build an object file
 IncLocal.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.o
 .PHONY : IncLocal.cpp.o
 
 IncLocal.i: IncLocal.cpp.i
@@ -167,7 +167,7 @@ IncLocal.i: IncLocal.cpp.i
 
 # target to preprocess a source file
 IncLocal.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.i
 .PHONY : IncLocal.cpp.i
 
 IncLocal.s: IncLocal.cpp.s
@@ -176,7 +176,7 @@ IncLocal.s: IncLocal.cpp.s
 
 # target to generate assembly for a file
 IncLocal.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncLocal.cpp.s
 .PHONY : IncLocal.cpp.s
 
 IncTestFunc.o: IncTestFunc.cpp.o
@@ -185,7 +185,7 @@ IncTestFunc.o: IncTestFunc.cpp.o
 
 # target to build an object file
 IncTestFunc.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.o
 .PHONY : IncTestFunc.cpp.o
 
 IncTestFunc.i: IncTestFunc.cpp.i
@@ -194,7 +194,7 @@ IncTestFunc.i: IncTestFunc.cpp.i
 
 # target to preprocess a source file
 IncTestFunc.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.i
 .PHONY : IncTestFunc.cpp.i
 
 IncTestFunc.s: IncTestFunc.cpp.s
@@ -203,7 +203,7 @@ IncTestFunc.s: IncTestFunc.cpp.s
 
 # target to generate assembly for a file
 IncTestFunc.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/IncTestFunc.cpp.s
 .PHONY : IncTestFunc.cpp.s
 
 PointCloud.o: PointCloud.cpp.o
@@ -212,7 +212,7 @@ PointCloud.o: PointCloud.cpp.o
 
 # target to build an object file
 PointCloud.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.o
 .PHONY : PointCloud.cpp.o
 
 PointCloud.i: PointCloud.cpp.i
@@ -221,7 +221,7 @@ PointCloud.i: PointCloud.cpp.i
 
 # target to preprocess a source file
 PointCloud.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.i
 .PHONY : PointCloud.cpp.i
 
 PointCloud.s: PointCloud.cpp.s
@@ -230,7 +230,7 @@ PointCloud.s: PointCloud.cpp.s
 
 # target to generate assembly for a file
 PointCloud.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/PointCloud.cpp.s
 .PHONY : PointCloud.cpp.s
 
 border.o: border.cpp.o
@@ -239,7 +239,7 @@ border.o: border.cpp.o
 
 # target to build an object file
 border.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.o
 .PHONY : border.cpp.o
 
 border.i: border.cpp.i
@@ -248,7 +248,7 @@ border.i: border.cpp.i
 
 # target to preprocess a source file
 border.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.i
 .PHONY : border.cpp.i
 
 border.s: border.cpp.s
@@ -257,7 +257,7 @@ border.s: border.cpp.s
 
 # target to generate assembly for a file
 border.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border.cpp.s
 .PHONY : border.cpp.s
 
 border_facet_selection.o: border_facet_selection.cpp.o
@@ -266,7 +266,7 @@ border_facet_selection.o: border_facet_selection.cpp.o
 
 # target to build an object file
 border_facet_selection.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.o
 .PHONY : border_facet_selection.cpp.o
 
 border_facet_selection.i: border_facet_selection.cpp.i
@@ -275,7 +275,7 @@ border_facet_selection.i: border_facet_selection.cpp.i
 
 # target to preprocess a source file
 border_facet_selection.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.i
 .PHONY : border_facet_selection.cpp.i
 
 border_facet_selection.s: border_facet_selection.cpp.s
@@ -284,7 +284,7 @@ border_facet_selection.s: border_facet_selection.cpp.s
 
 # target to generate assembly for a file
 border_facet_selection.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/border_facet_selection.cpp.s
 .PHONY : border_facet_selection.cpp.s
 
 coco.o: coco.cpp.o
@@ -293,7 +293,7 @@ coco.o: coco.cpp.o
 
 # target to build an object file
 coco.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.o
 .PHONY : coco.cpp.o
 
 coco.i: coco.cpp.i
@@ -302,7 +302,7 @@ coco.i: coco.cpp.i
 
 # target to preprocess a source file
 coco.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.i
 .PHONY : coco.cpp.i
 
 coco.s: coco.cpp.s
@@ -311,7 +311,7 @@ coco.s: coco.cpp.s
 
 # target to generate assembly for a file
 coco.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/coco.cpp.s
 .PHONY : coco.cpp.s
 
 main.o: main.cpp.o
@@ -320,7 +320,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -329,7 +329,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -338,7 +338,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 ring_extending_coco.o: ring_extending_coco.cpp.o
@@ -347,7 +347,7 @@ ring_extending_coco.o: ring_extending_coco.cpp.o
 
 # target to build an object file
 ring_extending_coco.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.o
 .PHONY : ring_extending_coco.cpp.o
 
 ring_extending_coco.i: ring_extending_coco.cpp.i
@@ -356,7 +356,7 @@ ring_extending_coco.i: ring_extending_coco.cpp.i
 
 # target to preprocess a source file
 ring_extending_coco.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.i
 .PHONY : ring_extending_coco.cpp.i
 
 ring_extending_coco.s: ring_extending_coco.cpp.s
@@ -365,7 +365,7 @@ ring_extending_coco.s: ring_extending_coco.cpp.s
 
 # target to generate assembly for a file
 ring_extending_coco.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/ring_extending_coco.cpp.s
 .PHONY : ring_extending_coco.cpp.s
 
 test_incrementalcoco.o: test_incrementalcoco.cpp.o
@@ -374,7 +374,7 @@ test_incrementalcoco.o: test_incrementalcoco.cpp.o
 
 # target to build an object file
 test_incrementalcoco.cpp.o:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.o
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.o
 .PHONY : test_incrementalcoco.cpp.o
 
 test_incrementalcoco.i: test_incrementalcoco.cpp.i
@@ -383,7 +383,7 @@ test_incrementalcoco.i: test_incrementalcoco.cpp.i
 
 # target to preprocess a source file
 test_incrementalcoco.cpp.i:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.i
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.i
 .PHONY : test_incrementalcoco.cpp.i
 
 test_incrementalcoco.s: test_incrementalcoco.cpp.s
@@ -392,7 +392,7 @@ test_incrementalcoco.s: test_incrementalcoco.cpp.s
 
 # target to generate assembly for a file
 test_incrementalcoco.cpp.s:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.s
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(MAKE) -f src/CMakeFiles/test_coco.dir/build.make src/CMakeFiles/test_coco.dir/test_incrementalcoco.cpp.s
 .PHONY : test_incrementalcoco.cpp.s
 
 # Help Target
@@ -445,6 +445,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bozhicheng/Documents/program/C++/newProject/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bozhicheng/Documents/program/gitnewprogram/newProject/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

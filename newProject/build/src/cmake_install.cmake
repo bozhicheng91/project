@@ -1,4 +1,4 @@
-# Install script for directory: /home/bozhicheng/Documents/program/C++/newProject/src
+# Install script for directory: /home/bozhicheng/Documents/program/gitnewprogram/newProject/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
