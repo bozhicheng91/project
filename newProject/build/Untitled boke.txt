@@ -1,0 +1,50 @@
+Ubuntu14.04下配置固定IP
+实验室需要构建静态网站作为个人知识管理工具，每个人要求都有属于自己的静态网站进行知识积累和交流。但是实验室的路由有时候会关闭，重启后给每台机器重新分配ip,因此为了方便访问每台主机，需要设置静态ip。参考了网上的一些教程，都没有成功，后来发现这一篇，设置成功，特此记录。
+原文地址：http://jingyan.baidu.com/article/e5c39bf5bbe0e739d7603396.html
+
+ubuntu14.04设置静态ip的流程如下：
+首先用root用户登陆，并输入密码。
+~$ su
+Password: 
+
+利用nano 打开/etc/network/interfaces 文件。
+# nano /etc/network/interfaces
+
+
+在interfaces 中添加如下内容：
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.100
+netmask 255.255.255.0
+gateway 192.168.0.1
+
+添加完毕，保存退出。接着配置DNS,DNS的配置文件为/etc/resolv.conf
+利用nano 打开该文件
+
+# nano /etc/resolv.conf
+
+在resolv.conf文件中添加如下内容：
+nameserver 192.168.0.1
+nameserver 220.170.64.68
+
+改完后重启的话，修改的信息将不被保存。若要永久改变，还需修改/etc/resolvconf/resolv.conf.d/base 文件
+利用nano 打开该文件
+# nano /etc/resolvconf/resolv.conf.d/base 
+
+在base文件中添加如下内容：
+nameserver 192.168.0.1
+nameserver 220.170.64.68
+
+保存退出，配置基本完成。若此时还是不能上网，则将/etc/NetworkManager/目录下的system-connections删除，或者移动到其他目录下。
+最后执行
+# /etc/NetworkManager/
+
+这样便可正常上网了！
+
+
+
+
+
+
+
