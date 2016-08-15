@@ -120,8 +120,8 @@ void IncLocal_faceAddToList(Face face,vector<FaceData*> *face_list);
 
 
 /*提取波前环*/
-void IncLocal_frontExtract(vector<EdgeData*> *edgeList, 
-                           vector<VertexData*> frontList);
+void IncLocal_frontExtract(vector<VertexData*> *vertexList ,vector<EdgeData*> *edgeList, 
+                           vector<VertexData*> *frontList);
 
 /*对波前边排序*/
 void IncLocal_sortFrontEdge(vector<EdgeData*> *frontEdge);

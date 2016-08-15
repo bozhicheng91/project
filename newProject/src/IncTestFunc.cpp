@@ -68,3 +68,31 @@ void IncTestFunc_outputData(vector<VertexData*>*pointlist,vector<FaceData*>*face
         outfacet.close();
 
 }
+
+
+void IncTestFunc_outputData(vector<VertexData*>*pointlist,int times){
+
+        string str1="./pointlist-",str2=".asc";
+        stringstream ss;
+        ss<<times; 
+        string s1 = ss.str();
+        string str=str1+s1+str2;
+         
+        ofstream out (str.c_str());
+        if (!out) {
+                cerr << "error: unable to open outPointdata file: "
+                     << out
+                     << endl;
+                exit(1);
+        }
+
+
+
+        for (auto itra = pointlist->begin(); itra != pointlist->end(); itra++){
+
+                out << *((*itra)->point) << endl;
+
+        }
+
+
+}

@@ -26,6 +26,7 @@ new_EdgeData(){
         ed->edge = new Edge;
         ed->faces = new Data_list;
         ed->id = -1;
+        //flag 为１时，代表该边在波前边提取模块中已处理为波前边
         ed->flag = 0;
         return ed;
 
@@ -41,6 +42,10 @@ new_VertexData(){
         vd->faces = new Data_list;
 
         vd->id = -1;
+        //利用flag 来标记点的属性。
+        //flag=0,表示该点为自由点
+        //flag=1,表示该点为饱和点。
+        //flag=2,表示该点为波前点
         vd->flag = 0;
         vd->tag = -1;
         vd->state = 0;

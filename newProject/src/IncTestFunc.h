@@ -6,6 +6,6 @@ void IncTestFunc_outputData(vector<Point>*pl, int times);
 
 void IncTestFunc_outputData(vector<VertexData*>*pointlist,vector<FaceData*>*facelist,  int times);
 
-
+void IncTestFunc_outputData(vector<VertexData*>*pointlist,int times);
 
 #endif

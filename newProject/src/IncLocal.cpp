@@ -74,6 +74,15 @@ void IncLocal_initialMesh(Point p,
         IncTestFunc_outputData(pointlist,  &facelist,manifoldFacetNum);
         //>>>>>>>>>>>>>>>>>>>>>//
 
+
+        
+        vector<VertexData*> frontList;
+        IncLocal_frontExtract(pointlist, &edgelist, &frontList);
+
+
+        int frontpointNum;
+        IncTestFunc_outputData(&frontList, frontpointNum);
+
         //边链表和面片链表内存释放。虽然vector链表不是
         //动态分配的内存，但是内部存储的变量为动态分配,
         //因此该处需要进行释放,
@@ -613,8 +622,10 @@ void IncLocal_faceAddToList(Face face,vector<FaceData*> *face_list){
 }
 
 /*提取波前环*/
-void IncLocal_frontExtract(vector<EdgeData*> *edgeList, 
-                           vector<VertexData*> frontList){
+void IncLocal_frontExtract(
+                           vector<VertexData*> *vertexList, 
+                          vector <EdgeData*> *edgeList, 
+                           vector<VertexData*> *frontList){
 
         vector<EdgeData*> frontEdge;
         for(auto it = edgeList->begin(); it != edgeList->end(); it++){
@@ -625,6 +636,15 @@ void IncLocal_frontExtract(vector<EdgeData*> *edgeList,
         }
         
         IncLocal_sortFrontEdge(&frontEdge);
+
+        for(auto itra = frontEdge.begin(); itra != frontEdge.end(); itra++){
+
+                        EdgeData *edge_tmp = *itra;
+                        VertexData *vertexdata = vertexList->at(edge_tmp->edge->first);
+                        VertexData *vertexdata2 = vertexList->at(edge_tmp->edge->second);
+                        
+                        frontList->push_back(vertexdata);
+                }
 
        
 }
@@ -641,41 +661,58 @@ void IncLocal_sortFrontEdge(vector<EdgeData*> *frontEdge){
         
         vector<EdgeData*> sortedEdge;
         sortedEdge.push_back(firstEdge);
+        firstEdge->flag = 1;
 
         int firEdge_v1 = firstEdge->edge->first;
         int firEdge_v2 = firstEdge->edge->second;
         
-        for(auto it = frontEdge->begin(); it != frontEdge->end(); it++){
+        int edge_size = frontEdge->size();
+        while(edge_size-- > 1)
+                {
+                        for(auto it = frontEdge->begin(); it != frontEdge->end(); it++){
 
-                EdgeData *edgedata = *it;
-                if(IncLocal_compEdgeData(edgedata,firstEdge) == 1)
-                        sortedEdge.push_back(edgedata);
-  
-        }
-        coco_edgedata_free(frontEdge);
+                                EdgeData *edgedata = *it;
+                                if (edgedata->flag == 1)
+                                        continue;
+                                
+                                if(IncLocal_compEdgeData(firstEdge,edgedata) == 1)
+                                        {
+                                                sortedEdge.push_back(edgedata);
+                                                edgedata->flag = 1;
+                                                cout << edgedata->edge->first << endl;
+                                                cout <<edgedata->edge->second << endl;
+                                                firstEdge = edgedata;
+                                                break;
+                                                
+                                        }
+                               
+                        }
+                }
+        vector<EdgeData*> ().swap(*frontEdge);
         frontEdge->swap(sortedEdge);
 }
 
 /*比较两条边的信息，若两边不同，返回０，若存在一个共同顶点，返回１，存在两个共同顶点，返回２*/
 int IncLocal_compEdgeData(EdgeData* firstEdge, EdgeData* secondEdge){
 
-        int FEv1 = firstEdge->edge->first;
-        int FEv2 = firstEdge->edge->second;
-        int SEv1 = secondEdge->edge->first;
-        int SEv2 = secondEdge->edge->second;
+        int f1 = firstEdge->edge->first;
+        int f2 = firstEdge->edge->second;
+        int s1 = secondEdge->edge->first;
+        int s2 = secondEdge->edge->second;
 
-        if(FEv1 != SEv1 && FEv1 != SEv2 && FEv2 != SEv1 && FEv2 != SEv2 )
-                return 0;
-        else if ((FEv1 == SEv1 && FEv2 == SEv2) || (FEv1 == SEv2 && FEv2 != SEv1))
-                return 2;
-        else {
-                if(FEv2 == SEv2)
-                        {
-                                int tmp = SEv1;
-                                SEv1 = SEv2;
-                                SEv2 = tmp;
-                        }
-                        
+        if(f2 == s1){
+
+                return 1;          
+        }
+        else if(f2 == s2 && f1 != s1){
+           
+                int tmp = s1;
+                secondEdge->edge->first = s2;
+                secondEdge->edge->second = tmp;
                 return 1;
         }
+        else
+                return 0;
+        
+        
 }

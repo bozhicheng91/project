@@ -17,7 +17,7 @@ int IncTest(){
         Tree kd_tree ;
 
         //输入文件的目录
-        string file_path = "../lib/foot.asc";
+        string file_path = "../../test_data/input/foot.asc";
 
         //将点云数据读入内存
         ring_extending_file_input(&p_tmp, file_path, &kd_tree, Pointmap, point_list);
